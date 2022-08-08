@@ -1,0 +1,26 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/header files/repo.h
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include "dynamicArray.h"
+        -:    4:#include "tutorial.h"
+        -:    5:
+        -:    6:class Repo {
+        -:    7:private:
+        -:    8:    DynamicArray<Tutorial> data;
+        -:    9:public:
+        -:   10:    void add(const Tutorial &t);
+        -:   11:    void remove(const Tutorial &t);
+        -:   12:    bool find(const std::string &linky);
+        -:   13:
+        -:   14:
+function _ZN4Repo8get_sizeEv called 0 returned 0% blocks executed 0%
+    #####:   15:    unsigned int get_size() { return this->data.get_size(); }
+    %%%%%:   15-block  0
+call    0 never executed
+        -:   16:    int get_index(const std::string &link);
+        -:   17:    Tutorial &get_at(int index);
+        -:   18:
+        -:   19:};

@@ -1,0 +1,135 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/source files/service.cpp
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../header files/service.h"
+        -:    2:#include <cstring>
+        -:    3:
+function _ZN7ServiceC2ER4RepoS1_S1_ called 2 returned 100% blocks executed 100%
+        2:    4:Service::Service(Repo &rep, Repo &watch, Repo &kiueue) : r{rep}, wl{watch}, queue{kiueue} {}
+        -:    5:
+function _ZN7Service11add_to_repoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8DurationiS7_ called 16 returned 100% blocks executed 71%
+       16:    6:void Service::add_to_repo(const std::string &title, const std::string &presenter, Duration duration, int likes,
+        -:    7:                          const std::string &link) {
+       32:    8:    Tutorial t{title, presenter, duration, likes, link};
+       16:    8-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:    8-block  1
+call    3 returned 16
+    $$$$$:    8-block  2
+call    4 never executed
+       16:    9:    this->r.add(t);
+       16:    9-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   10:}
+        -:   11:
+function _ZN7Service14update_in_repoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8DurationiS7_S7_ called 1 returned 100% blocks executed 100%
+        1:   12:void Service::update_in_repo(const std::string &title, const std::string &presenter, Duration duration, int likes,
+        -:   13:                             const std::string &link, const std::string &linky) {
+        1:   14:    this->get_repo().get_at(this->get_repo().get_index(link)).update(title, presenter, duration, likes, linky);
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+        1:   15:}
+        -:   16:
+function _ZN7Service16remove_from_repoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 48%
+        1:   17:void Service::remove_from_repo(const std::string &link) {
+        3:   18:    Tutorial t = Tutorial("", "", Duration{0, 0}, 0, link);
+        1:   18-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   18-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   18-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+        1:   18-block  3
+call   14 returned 1
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+    $$$$$:   18-block  8
+call   15 never executed
+        1:   19:    this->r.remove(t);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:}
+        -:   21:
+function _ZN7Service14search_in_repoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 95%
+        1:   22:Repo Service::search_in_repo(const std::string &pres) {
+        1:   23:    Repo thing;
+        1:   23-block  0
+call    0 returned 1
+        2:   24:    for (int i = 0; i < this->get_repo().get_size(); i++) {
+        2:   24-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   24-block  1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1
+        1:   24-block  2
+        1:   25:        if(this->get_repo().get_at(i).get_presenter().find(pres) != std::string::npos)
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   25-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   25-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   26:            thing.add(this->get_repo().get_at(i));
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        -:   27:        }
+        1:   28:    return thing;
+        1:   28-block  0
+        1:   28-block  1
+        -:   29:    }
+        -:   30:
+function _ZN7Service17add_to_watch_listE8Tutorial called 1 returned 100% blocks executed 100%
+        1:   31:void Service::add_to_watch_list(const Tutorial tut){
+        1:   32:    this->wl.add(tut);
+        1:   32-block  0
+call    0 returned 1
+        1:   33:}
+        -:   34:
+function _ZN7Service22remove_from_watch_listEi called 1 returned 100% blocks executed 100%
+        1:   35:void Service::remove_from_watch_list(int pos){
+        1:   36:    this->wl.remove(this->wl.get_at(pos));
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   37:}

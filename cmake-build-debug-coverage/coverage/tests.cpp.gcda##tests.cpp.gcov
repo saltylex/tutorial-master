@@ -1,0 +1,957 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/source files/tests.cpp
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/tests.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <cassert>
+        -:    3:#include "../header files/tutorial.h"
+        -:    4:#include "../header files/repo.h"
+        -:    5:#include "../header files/dynamicArray.h"
+        -:    6:#include "../header files/service.h"
+        -:    7:
+function _Z13test_tutorialv called 1 returned 100% blocks executed 56%
+        1:    8:void test_tutorial(){
+        2:    9:    std::string tutorial_copy;
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:    9-block  1
+call    2 never executed
+        2:   10:    Tutorial t = Tutorial();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   10-block  0
+call    4 never executed
+        1:   11:    t = Tutorial("title", "presenter", Duration{1,20}, 3, "https://www.youtube.com/watch?v=jqONINYF17M");
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   11-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   11-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   11-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   11-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:   11-block  5
+call   23 never executed
+    $$$$$:   11-block  6
+    $$$$$:   11-block  7
+call   24 never executed
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+call   25 never executed
+    $$$$$:   11-block 10
+    $$$$$:   11-block 11
+call   26 never executed
+    $$$$$:   11-block 12
+    $$$$$:   11-block 13
+call   27 never executed
+    $$$$$:   11-block 14
+    $$$$$:   11-block 15
+call   28 never executed
+    $$$$$:   11-block 16
+        1:   12:    tutorial_copy = t.to_string();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  0
+call    3 returned 1
+call    4 returned 1
+       1*:   13:    assert(t.get_duration().minutes == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   13-block  0
+call    3 never executed
+       1*:   14:    assert(t.get_duration().seconds == 20);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   14-block  1
+call    3 never executed
+       1*:   15:    assert(t.get_likes() == 3);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   15-block  1
+call    3 never executed
+       1*:   16:    assert(t.get_title() == "title");
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   16-block  2
+call    6 never executed
+        1:   16-block  3
+call    7 returned 1
+       1*:   17:    assert(t.get_presenter() == "presenter");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   17-block  1
+call    6 never executed
+        1:   17-block  2
+call    7 returned 1
+       1*:   18:    assert(t.get_link() == "https://www.youtube.com/watch?v=jqONINYF17M");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   18-block  1
+call    6 never executed
+        1:   18-block  2
+call    7 returned 1
+        1:   19:    t.update("new","new_p",Duration{1,2},3,"https://www.youtube.com/watch?v=jqONINYF17M");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   19-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   19-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   19-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   19-block  4
+call   21 never executed
+    $$$$$:   19-block  5
+    $$$$$:   19-block  6
+call   22 never executed
+    $$$$$:   19-block  7
+    $$$$$:   19-block  8
+call   23 never executed
+    $$$$$:   19-block  9
+    $$$$$:   19-block 10
+call   24 never executed
+    $$$$$:   19-block 11
+    $$$$$:   19-block 12
+call   25 never executed
+    $$$$$:   19-block 13
+    $$$$$:   19-block 14
+call   26 never executed
+    $$$$$:   19-block 15
+       1*:   20:    assert(t.get_title() == "new");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   20-block  1
+call    6 never executed
+        1:   20-block  2
+call    7 returned 1
+        2:   21:    std::string tut = t.to_string();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  0
+call    3 returned 1
+    $$$$$:   21-block  1
+call    4 never executed
+       1*:   22:    assert(tut == "new by new_p | 1:02 | Likes:3\nhttps://www.youtube.com/watch?v=jqONINYF17M");
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   22-block  1
+call    3 never executed
+        1:   23:    std::cout<<"Tutorial tested.\n";
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:}
+        -:   25:
+function _Z9test_repov called 1 returned 100% blocks executed 49%
+        1:   26:void test_repo(){
+        2:   27:    Repo test_repo;
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   27-block  1
+call    4 never executed
+        3:   28:    Tutorial t = Tutorial("title", "presenter", Duration{1,20}, 3, "https://www.youtube.com/watch?v=jqONINYF17M");
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   28-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   28-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   28-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+        1:   28-block  4
+call   20 returned 1
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+    $$$$$:   28-block  9
+    $$$$$:   28-block 10
+    $$$$$:   28-block 11
+call   21 never executed
+        -:   29:    // remove, get_size, get_index, get_at
+       1*:   30:    assert(test_repo.find("lol") == false);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   30-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   30-block  2
+call    9 never executed
+        1:   30-block  3
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   30-block  4
+call   12 never executed
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+call   13 never executed
+    $$$$$:   30-block  7
+        1:   31:    test_repo.add(t);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   32:    assert(test_repo.find("https://www.youtube.com/watch?v=jqONINYF17M") == true);
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   32-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   32-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   32-block  3
+call    9 never executed
+        1:   32-block  4
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   32-block  5
+call   12 never executed
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+call   13 never executed
+    $$$$$:   32-block  8
+       1*:   33:    assert(test_repo.get_size()==1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   33-block  1
+call    5 never executed
+       1*:   34:    assert(test_repo.get_index("https://www.youtube.com/watch?v=jqONINYF17M")==0);
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   34-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   34-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   34-block  3
+call    9 never executed
+        1:   34-block  4
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   34-block  5
+call   12 never executed
+    $$$$$:   34-block  6
+    $$$$$:   34-block  7
+call   13 never executed
+    $$$$$:   34-block  8
+       1*:   35:    assert(test_repo.get_at(0)==t);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   35-block  1
+call    6 never executed
+        1:   36:    test_repo.remove(t);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   37:    assert(test_repo.find("https://www.youtube.com/watch?v=jqONINYF17M") == false);
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   37-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   37-block  3
+call    9 never executed
+        1:   37-block  4
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   37-block  5
+call   12 never executed
+    $$$$$:   37-block  6
+    $$$$$:   37-block  7
+call   13 never executed
+    $$$$$:   37-block  8
+       1*:   38:    assert(test_repo.get_index("https://www.youtube.com/watch?v=jqONINYF17M")==-1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   38-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   38-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   38-block  2
+call    9 never executed
+        1:   38-block  3
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   38-block  4
+call   12 never executed
+    $$$$$:   38-block  5
+    $$$$$:   38-block  6
+call   13 never executed
+    $$$$$:   38-block  7
+        1:   39:    std::cout<<"Repo tested.\n";
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   40:
+        -:   41:
+        1:   42:}
+        -:   43:
+function _Z12test_servicev called 1 returned 100% blocks executed 49%
+        1:   44:void test_service(){
+        2:   45:    Repo repo, watch, queueue;
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   45-block  3
+call   12 never executed
+    $$$$$:   45-block  4
+call   13 never executed
+    $$$$$:   45-block  5
+call   14 never executed
+        1:   46:    Service serv = Service(repo, watch, queueue);
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47:    serv.add_to_repo("title","presenter",Duration{1,1}, 32,"https://www.youtube.com/watch?v=jqONINYF17M");
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   47-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   47-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   47-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   47-block  5
+call   21 never executed
+    $$$$$:   47-block  6
+    $$$$$:   47-block  7
+call   22 never executed
+    $$$$$:   47-block  8
+    $$$$$:   47-block  9
+call   23 never executed
+    $$$$$:   47-block 10
+    $$$$$:   47-block 11
+call   24 never executed
+    $$$$$:   47-block 12
+    $$$$$:   47-block 13
+call   25 never executed
+    $$$$$:   47-block 14
+    $$$$$:   47-block 15
+call   26 never executed
+    $$$$$:   47-block 16
+       1*:   48:    assert(serv.get_size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   48-block  1
+call    5 never executed
+       1*:   49:    assert(serv.get_repo().get_at(0)==Tutorial("title","presenter",Duration{1,1},32,"https://www.youtube.com/watch?v=jqONINYF17M"));
+        1:   49-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   49-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   49-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   49-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   49-block  4
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   49-block  5
+call   19 returned 1
+branch 20 taken 0 (fallthrough)
+branch 21 taken 1
+    %%%%%:   49-block  6
+call   22 never executed
+        1:   49-block  7
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+call   27 returned 1
+call   28 returned 1
+call   29 returned 1
+    $$$$$:   49-block  8
+call   30 never executed
+    $$$$$:   49-block  9
+    $$$$$:   49-block 10
+call   31 never executed
+    $$$$$:   49-block 11
+    $$$$$:   49-block 12
+call   32 never executed
+    $$$$$:   49-block 13
+    $$$$$:   49-block 14
+call   33 never executed
+    $$$$$:   49-block 15
+    $$$$$:   49-block 16
+call   34 never executed
+    $$$$$:   49-block 17
+    $$$$$:   49-block 18
+call   35 never executed
+    $$$$$:   49-block 19
+    $$$$$:   49-block 20
+call   36 never executed
+    $$$$$:   49-block 21
+       1*:   50:    assert(serv.get_watch_list().get_size()==0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   50-block  1
+call    6 never executed
+       1*:   51:    assert(serv.get_queue().get_size()==0);
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   51-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   51-block  2
+call    6 never executed
+       1*:   52:    assert(serv.search_in_repo("pres").get_size()==1);
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   52-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   52-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   52-block  4
+call   12 never executed
+        1:   52-block  5
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   52-block  6
+call   16 never executed
+    $$$$$:   52-block  7
+    $$$$$:   52-block  8
+call   17 never executed
+    $$$$$:   52-block  9
+    $$$$$:   52-block 10
+call   18 never executed
+    $$$$$:   52-block 11
+        1:   53:    serv.update_in_repo("new_title","new_presenter",Duration{2,2},33,"https://www.youtube.com/watch?v=jqONINYF17M","new_link");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   53-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   53-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   53-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   53-block  3
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   53-block  4
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+call   26 returned 1
+    $$$$$:   53-block  5
+call   27 never executed
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+call   28 never executed
+    $$$$$:   53-block  8
+    $$$$$:   53-block  9
+call   29 never executed
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+call   30 never executed
+    $$$$$:   53-block 12
+    $$$$$:   53-block 13
+call   31 never executed
+    $$$$$:   53-block 14
+    $$$$$:   53-block 15
+call   32 never executed
+    $$$$$:   53-block 16
+    $$$$$:   53-block 17
+call   33 never executed
+    $$$$$:   53-block 18
+    $$$$$:   53-block 19
+call   34 never executed
+    $$$$$:   53-block 20
+       1*:   54:    assert(serv.get_repo().get_at(0).get_title()=="new_title");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   54-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   54-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   54-block  2
+call   10 never executed
+        1:   54-block  3
+call   11 returned 1
+        1:   55:    serv.remove_from_repo("new_link");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   55-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   55-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   55-block  2
+call    9 never executed
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+call   10 never executed
+    $$$$$:   55-block  5
+       1*:   56:    assert(serv.get_repo().get_size()==0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   56-block  0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   56-block  1
+call    6 never executed
+        3:   57:    Tutorial tut = Tutorial("title","presenter",Duration{1,1},32,"https://www.youtube.com/watch?v=jqONINYF17M");
+        1:   57-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   57-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   57-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   57-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+        1:   57-block  4
+call   20 returned 1
+    $$$$$:   57-block  5
+    $$$$$:   57-block  6
+    $$$$$:   57-block  7
+    $$$$$:   57-block  8
+    $$$$$:   57-block  9
+    $$$$$:   57-block 10
+    $$$$$:   57-block 11
+call   21 never executed
+        1:   58:    serv.add_to_watch_list(tut);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   58-block  1
+call    6 returned 1
+    $$$$$:   58-block  2
+call    7 never executed
+    $$$$$:   58-block  3
+       1*:   59:    assert(serv.get_watch_list().get_size()==1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   59-block  1
+call    6 never executed
+        1:   60:    serv.remove_from_watch_list(0);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   61:    assert(serv.get_watch_list().get_size()==0);
+        1:   61-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   61-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   61-block  2
+call    6 never executed
+        1:   62:    std::cout<<"Service tested.\n";
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63:}
+        -:   64:
+function _Z10test_arrayv called 1 returned 100% blocks executed 67%
+        1:   65:void test_array(){
+        2:   66:        DynamicArray<int> arr;
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   66-block  1
+call    4 never executed
+       1*:   67:        assert(arr.get_size() == 0);
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   67-block  1
+call    3 never executed
+        1:   68:        arr.add(1);
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   68-block  1
+        1:   69:        arr.add(2);
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   69-block  1
+       1*:   70:        assert(arr[0] == 1);
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   70-block  1
+call    3 never executed
+       1*:   71:        assert(arr[1] == 2);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   71-block  1
+call    3 never executed
+        2:   72:        DynamicArray<int> arr2 = DynamicArray<int>(arr);
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+call    3 returned 1
+    $$$$$:   72-block  2
+call    4 never executed
+       1*:   73:        assert(arr2[0] == 1);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   73-block  1
+call    3 never executed
+       1*:   74:        assert(arr2[1] == 2);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   74-block  1
+call    3 never executed
+        -:   75:
+        1:   76:        arr.clear();
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   77:        assert(arr.get_size() == 0);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   77-block  1
+call    3 never executed
+        -:   78:
+        1:   79:        arr = arr2;
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   80:        assert(arr[0] == 1);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   80-block  1
+call    3 never executed
+       1*:   81:        assert(arr[1] == 2);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   81-block  1
+call    3 never executed
+       1*:   82:        assert(arr.get_size() == 2);
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   82-block  1
+call    3 never executed
+        1:   83:        arr.remove(0);
+        1:   83-block  0
+call    0 returned 1
+       1*:   84:        assert(arr[0] == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   84-block  0
+call    3 never executed
+       1*:   85:        assert(arr.get_size() == 1);
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   85-block  1
+call    3 never executed
+        1:   86:        arr = arr;
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   87:        assert(arr[0] == 2);
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   87-block  1
+call    3 never executed
+       1*:   88:        assert(arr.get_size() == 1);
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   88-block  1
+call    3 never executed
+        1:   89:        std::cout<<"Array tested.\n";
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90:    }
+        -:   91:
+        -:   92:
+function _Z15test_everythingv called 1 returned 100% blocks executed 100%
+        1:   93:void test_everything() {
+        1:   94:    test_tutorial();
+        1:   94-block  0
+call    0 returned 1
+        1:   95:    test_repo();
+call    0 returned 1
+        1:   96:    test_service();
+call    0 returned 1
+        1:   97:    test_array();
+call    0 returned 1
+        1:   98:    std::cout<<"All tests passed!\n\n";
+call    0 returned 1
+        1:   99:}

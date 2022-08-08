@@ -1,0 +1,54 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/source files/main.cpp
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../header files/ui.h"
+        -:    2:#include "../header files/tests.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 68%
+        1:    4:int main(){
+        1:    5:    test_everything();
+        1:    5-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    6:    Repo r, w, q;
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    6-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:    6-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+call   10 returned 1
+    $$$$$:    6-block  3
+call   11 never executed
+    $$$$$:    6-block  4
+call   12 never executed
+    $$$$$:    6-block  5
+call   13 never executed
+        1:    7:    Service s = Service(r, w, q);
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8:    UI ui = UI(s);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    ui.start_ui();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    return 0;
+        1:   10-block  0
+call    0 returned 1
+        -:   11:}

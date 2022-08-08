@@ -1,0 +1,89 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/header files/tutorial.h
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <string>
+        -:    2:
+        -:    3:#pragma once
+        -:    4:
+        -:    5:struct Duration {
+        -:    6:    int minutes;
+        -:    7:    int seconds;
+        -:    8:};
+        -:    9:typedef struct Duration Duration;
+        -:   10:
+        -:   11:class Tutorial {
+        -:   12:private:
+        -:   13:    std::string title;
+        -:   14:    std::string presenter;
+        -:   15:    Duration duration;
+        -:   16:
+        -:   17:    std::string link;
+        -:   18:
+        -:   19:public:
+        -:   20:    bool operator==(const Tutorial &tut) const {
+        -:   21:        return (title == tut.title)
+        -:   22:               && (presenter == tut.presenter)
+        -:   23:               && (duration.minutes == tut.duration.minutes) && (duration.seconds == tut.duration.seconds) &&
+        -:   24:               (link == tut.link);
+        -:   25:    }
+        -:   26:
+        -:   27:    int likes;
+        -:   28:
+function _ZN8TutorialC2Ev called 61 returned 100% blocks executed 48%
+       61:   29:    Tutorial() : title{""}, presenter{""}, duration{0, 0}, likes{0}, link{""} {};
+       61:   29-block  0
+call    0 returned 61
+call    1 returned 61
+branch  2 taken 61 (fallthrough)
+branch  3 taken 0 (throw)
+       61:   29-block  1
+call    4 returned 61
+call    5 returned 61
+call    6 returned 61
+branch  7 taken 61 (fallthrough)
+branch  8 taken 0 (throw)
+       61:   29-block  2
+call    9 returned 61
+call   10 returned 61
+call   11 returned 61
+branch 12 taken 61 (fallthrough)
+branch 13 taken 0 (throw)
+       61:   29-block  3
+call   14 returned 61
+    $$$$$:   29-block  4
+call   15 never executed
+    $$$$$:   29-block  5
+call   16 never executed
+    $$$$$:   29-block  6
+call   17 never executed
+    $$$$$:   29-block  7
+    $$$$$:   29-block  8
+call   18 never executed
+    $$$$$:   29-block  9
+    $$$$$:   29-block 10
+call   19 never executed
+    $$$$$:   29-block 11
+call   20 never executed
+        -:   30:
+        -:   31:    Tutorial(const std::string &title, const std::string &presenter, Duration duration, int likes,
+        -:   32:             const std::string &link);
+        -:   33:
+        -:   34:
+        -:   35:    std::string get_title() const { return this->title; }
+        -:   36:
+        -:   37:    std::string get_presenter() const { return this->presenter; }
+        -:   38:
+        -:   39:    Duration get_duration() const { return this->duration; }
+        -:   40:
+        -:   41:    int get_likes() const { return this->likes; }
+        -:   42:
+        -:   43:    std::string get_link() const { return this->link; }
+        -:   44:
+        -:   45:    void update(const std::string &new_title, const std::string &new_presenter, Duration new_duration, int new_likes,
+        -:   46:                const std::string &new_link);
+        -:   47:
+        -:   48:
+        -:   49:    std::string to_string();
+        -:   50:
+        -:   51:};

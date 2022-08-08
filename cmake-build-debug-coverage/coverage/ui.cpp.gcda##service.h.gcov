@@ -1,0 +1,50 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/header files/service.h
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include "repo.h"
+        -:    4:#include "tutorial.h"
+        -:    5:#include <string>
+        -:    6:
+        -:    7:class Service {
+        -:    8:
+        -:    9:public:
+        -:   10:    Repo &r;
+        -:   11:    Repo &wl;
+        -:   12:    Repo &queue;
+        -:   13:    Service(Repo &rep, Repo &watch, Repo &kiueue);
+        -:   14:
+        -:   15:    void
+        -:   16:    add_to_repo(const std::string &title, const std::string &presenter, Duration duration, int likes, const std::string &link);
+        -:   17:
+        -:   18:    void remove_from_repo(const std::string &link);
+        -:   19:
+        -:   20:    void update_in_repo(const std::string &title, const std::string &presenter, Duration duration, int likes,
+        -:   21:                        const std::string &link, const std::string &linky);
+        -:   22:
+        -:   23:    Repo search_in_repo(const std::string &pres);
+        -:   24:
+        -:   25:    void add_to_watch_list(const Tutorial tut);
+        -:   26:
+        -:   27:    void remove_from_watch_list(int pos);
+        -:   28:
+function _ZNK7Service8get_sizeEv called 1 returned 100% blocks executed 100%
+        1:   29:    unsigned int get_size() const { return this->r.get_size(); }
+        1:   29-block  0
+call    0 returned 1
+        -:   30:
+function _ZN7Service8get_repoEv called 0 returned 0% blocks executed 0%
+    #####:   31:    Repo &get_repo() { return this->r; }
+    %%%%%:   31-block  0
+        -:   32:
+function _ZN7Service14get_watch_listEv called 3 returned 100% blocks executed 100%
+        3:   33:    Repo &get_watch_list() { return this->wl; }
+        3:   33-block  0
+        -:   34:
+function _ZN7Service9get_queueEv called 4 returned 100% blocks executed 100%
+        4:   35:    Repo &get_queue() { return this->queue; }
+        4:   35-block  0
+        -:   36:};
+        -:   37:

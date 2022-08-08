@@ -1,0 +1,208 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/source files/tutorial.cpp
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/tutorial.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/tutorial.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../header files/tutorial.h"
+        -:    2:
+function _ZN8TutorialC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8DurationiS7_ called 21 returned 100% blocks executed 62%
+       21:    3:Tutorial::Tutorial(const std::string &title, const std::string &presenter, Duration duration, int likes, const std::string &link){
+       21:    3-block  0
+call    0 returned 21
+call    1 returned 21
+call    2 returned 21
+    $$$$$:    3-block  1
+call    3 never executed
+    $$$$$:    3-block  2
+call    4 never executed
+    $$$$$:    3-block  3
+call    5 never executed
+       21:    4:    this->title = title;
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:    5:    this->presenter = presenter;
+       21:    5-block  0
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:    6:    this->duration = duration;
+       21:    7:    this->likes = likes;
+       21:    8:    this->link = link;
+       21:    8-block  0
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:    9:}
+       21:    9-block  0
+function _ZN8Tutorial6updateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8DurationiS7_ called 2 returned 100% blocks executed 100%
+        2:   10:void Tutorial::update(const std::string &new_title, const std::string &new_presenter, Duration new_duration, int new_likes,
+        -:   11:                      const std::string &new_link) {
+        2:   12:    this->title = new_title;
+        2:   12-block  0
+call    0 returned 2
+        2:   13:    this->presenter = new_presenter;
+call    0 returned 2
+        2:   14:    this->duration = new_duration;
+        2:   15:    this->likes = new_likes;
+        2:   16:    this->link = new_link;
+call    0 returned 2
+        2:   17:}
+        -:   18:
+function _ZN8Tutorial9to_stringB5cxx11Ev called 2 returned 100% blocks executed 49%
+        2:   19:std::string Tutorial::to_string() {
+        2:   20:    std::string s;
+        2:   20-block  0
+call    0 returned 2
+        2:   21:    s += this->title + " by ";
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   21-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   21-block  1
+call    6 returned 2
+    $$$$$:   21-block  2
+call    7 never executed
+    $$$$$:   21-block  3
+        2:   22:    s += this->presenter + " | ";
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   22-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   22-block  1
+call    6 returned 2
+    $$$$$:   22-block  2
+call    7 never executed
+    $$$$$:   22-block  3
+        2:   23:    if(this->duration.seconds >= 10)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   24:        s += std::to_string(this->duration.minutes) + ":" + std::to_string(this->duration.seconds) + " | Likes:";
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   24-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   24-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   24-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   24-block  6
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:   24-block  7
+call   23 never executed
+    $$$$$:   24-block  8
+    $$$$$:   24-block  9
+call   24 never executed
+    $$$$$:   24-block 10
+    $$$$$:   24-block 11
+call   25 never executed
+    $$$$$:   24-block 12
+    $$$$$:   24-block 13
+call   26 never executed
+    $$$$$:   24-block 14
+    $$$$$:   24-block 15
+call   27 never executed
+    $$$$$:   24-block 16
+        -:   25:    else
+        1:   26:        s += std::to_string(this->duration.minutes) +  ":0" + std::to_string(this->duration.seconds) + " | Likes:";
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   26-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   26-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   26-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   26-block  6
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:   26-block  7
+call   23 never executed
+    $$$$$:   26-block  8
+    $$$$$:   26-block  9
+call   24 never executed
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+call   25 never executed
+    $$$$$:   26-block 12
+    $$$$$:   26-block 13
+call   26 never executed
+    $$$$$:   26-block 14
+    $$$$$:   26-block 15
+call   27 never executed
+    $$$$$:   26-block 16
+        -:   27:
+        2:   28:    s += std::to_string(this->likes) + "\n";
+        2:   28-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   28-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   28-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   28-block  3
+call    9 returned 2
+call   10 returned 2
+    $$$$$:   28-block  4
+call   11 never executed
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+call   12 never executed
+    $$$$$:   28-block  7
+        2:   29:    s += this->link;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   30:    return s;
+        2:   30-block  0
+        2:   30-block  1
+        -:   31:}

@@ -1,0 +1,103 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/source files/repo.cpp
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../header files/repo.h"
+        -:    2:
+function _ZN4Repo4findERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 92%
+        3:    3:bool Repo::find(const std::string &linky) {
+       3*:    4:    for(int i = 0; i < this->get_size(); i++) {
+        3:    4-block  0
+        3:    4-block  1
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+    %%%%%:    4-block  2
+        1:    5:        if(linky == this->data[i].get_link()) {
+        1:    5-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:    6:            return true;
+        1:    6-block  0
+        -:    7:        }
+        -:    8:    }
+        2:    9:    return false;
+        2:    9-block  0
+        -:   10:}
+        -:   11:
+function _ZN4Repo3addERK8Tutorial called 19 returned 100% blocks executed 100%
+       19:   12:void Repo::add(const Tutorial &c) {
+       19:   13:    this->data.add(c);
+       19:   13-block  0
+call    0 returned 19
+       19:   14:}
+        -:   15:
+function _ZN4Repo6removeERK8Tutorial called 3 returned 100% blocks executed 82%
+        3:   16:void Repo::remove(const Tutorial &t) {
+       3*:   17:    for(int i = 0; i < this->get_size(); i++) {
+        3:   17-block  0
+        3:   17-block  1
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0
+    %%%%%:   17-block  2
+        3:   18:        if(t.get_link() == this->data[i].get_link()) {
+        3:   18-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   18-block  1
+call    5 returned 3
+call    6 returned 3
+call    7 returned 3
+branch  8 taken 3 (fallthrough)
+branch  9 taken 0
+    $$$$$:   18-block  2
+call   10 never executed
+        3:   19:            this->data.remove(i);
+        3:   19-block  0
+call    0 returned 3
+        3:   20:            return;
+        -:   21:        }
+        -:   22:    }
+        -:   23:}
+        -:   24:
+function _ZN4Repo6get_atEi called 9 returned 100% blocks executed 100%
+        9:   25:Tutorial &Repo::get_at(int index) {
+        9:   26:    return this->data[index];
+        9:   26-block  0
+call    0 returned 9
+        -:   27:}
+        -:   28:
+        -:   29:
+        -:   30:
+function _ZN4Repo9get_indexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 92%
+        3:   31:int Repo::get_index(const std::string &link) {
+       3*:   32:    for(int i = 0; i < this->get_size(); i++) {
+        3:   32-block  0
+        3:   32-block  1
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+    %%%%%:   32-block  2
+        2:   33:        if(link == this->data[i].get_link()) {
+        2:   33-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:   34:            return i;
+        2:   34-block  0
+        -:   35:        }
+        -:   36:    }
+        1:   37:    return -1;
+        1:   37-block  0
+        -:   38:}

@@ -1,0 +1,173 @@
+        -:    0:Source:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/header files/dynamicArray.h
+        -:    0:Graph:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/lexig/OneDrive/Documente/GitHub/a5-6-913-Goia-Alexia/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Goia_Alexia.dir/source_files/repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include <cstdlib>
+        -:    4:
+        -:    5:template<class element>
+        -:    6:class DynamicArray {
+        -:    7:public:
+        -:    8:    DynamicArray(); // constructor
+        -:    9:    DynamicArray(const DynamicArray &a); // copy constructor
+        -:   10:    ~DynamicArray(); // destructor
+        -:   11:    DynamicArray &operator=(const DynamicArray &a); // assignment operator
+        -:   12:
+        -:   13:    element &operator[](unsigned int index); // get array item
+        -:   14:    void add(const element &item); // Add item to the end of array
+        -:   15:
+        -:   16:    unsigned int get_size(); // get size of array (elements)
+        -:   17:    void clear(); // clear array
+        -:   18:    void remove(unsigned int pos); // delete array item
+        -:   19:    void *get_arr(); // get void* pointer to array data
+        -:   20:
+        -:   21:private:
+        -:   22:    element *array; // pointer for array's memory
+        -:   23:    unsigned int size; // current element
+        -:   24:    unsigned int capacity; // actual size of allocated memory
+        -:   25:
+        -:   26:    const static unsigned int default_capacity = 2;
+        -:   27:};
+        -:   28:
+        -:   29:template<class element>
+        -:   30:DynamicArray<element>::DynamicArray() : size{0}, capacity{default_capacity} {
+        -:   31:    this->array = new element[this->capacity];
+        -:   32:}
+        -:   33:
+        -:   34:template<class element>
+        -:   35:DynamicArray<element>::DynamicArray(const DynamicArray &a) {
+        -:   36:    this->size = a.size;
+        -:   37:    this->capacity = a.capacity;
+        -:   38:    this->array = new element[this->capacity];
+        -:   39:    for (int i = 0; i < this->size; i++)
+        -:   40:        this->array[i] = a.array[i];
+        -:   41:}
+        -:   42:
+        -:   43:template<class element>
+        -:   44:DynamicArray<element>::~DynamicArray() {
+        -:   45:    delete[] this->array;
+        -:   46:}
+        -:   47:
+        -:   48:template<class element>
+        -:   49:DynamicArray<element> &DynamicArray<element>::operator=(const DynamicArray &a) {
+        -:   50:    if (this == &a)
+        -:   51:        return *this;
+        -:   52:
+        -:   53:    this->capacity = a.capacity;
+        -:   54:    this->size = a.size;
+        -:   55:
+        -:   56:    delete[] this->array;
+        -:   57:    this->array = new element[this->capacity];
+        -:   58:    for (int i = 0; i < this->size; i++)
+        -:   59:        this->array[i] = a.array[i];
+        -:   60:
+        -:   61:    return *this;
+        -:   62:}
+        -:   63:
+        -:   64:template<class element>
+function _ZN12DynamicArrayI8TutorialEixEj called 15 returned 100% blocks executed 100%
+       15:   65:element &DynamicArray<element>::operator[](unsigned int index) {
+       15:   66:    return this->array[index];
+       15:   66-block  0
+        -:   67:}
+        -:   68:
+        -:   69:template<class element>
+function _ZN12DynamicArrayI8TutorialE3addERKS0_ called 19 returned 100% blocks executed 68%
+       19:   70:void DynamicArray<element>::add(const element &item) {
+       19:   71:    this->size++;
+       19:   72:    if (this->size >= this->capacity) {
+       19:   72-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 16
+        3:   73:        this->capacity *= 2;
+      31*:   74:        element *new_arr = new element[this->capacity];
+        3:   74-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   74-block  1
+    %%%%%:   74-block  2
+        3:   74-block  3
+call    2 returned 3
+       31:   74-block  4
+branch  3 taken 28 (fallthrough)
+branch  4 taken 3
+       28:   74-block  5
+call    5 returned 28
+branch  6 taken 28 (fallthrough)
+branch  7 taken 0 (throw)
+       28:   74-block  6
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+call    8 never executed
+    $$$$$:   74-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   74-block 10
+    $$$$$:   74-block 11
+    $$$$$:   74-block 12
+call   11 never executed
+       17:   75:        for (int i = 0; i < this->size; i++) {
+        3:   75-block  0
+       17:   75-block  1
+branch  0 taken 14 (fallthrough)
+branch  1 taken 3
+       14:   76:            new_arr[i] = this->array[i];
+       14:   76-block  0
+call    0 returned 14
+        -:   77:        }
+       17:   78:        delete[] this->array;
+        3:   78-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   78-block  1
+       17:   78-block  2
+branch  2 taken 14 (fallthrough)
+branch  3 taken 3
+       14:   78-block  3
+call    4 returned 14
+        3:   78-block  4
+call    5 returned 3
+        3:   79:        this->array = new_arr;
+        3:   79-block  0
+        -:   80:    }
+       19:   81:    this->array[this->size - 1] = item;
+       19:   81-block  0
+call    0 returned 19
+       19:   82:}
+        -:   83:
+        -:   84:template<class element>
+function _ZN12DynamicArrayI8TutorialE8get_sizeEv called 20 returned 100% blocks executed 100%
+       20:   85:unsigned int DynamicArray<element>::get_size() {
+       20:   86:    return this->size;
+       20:   86-block  0
+        -:   87:}
+        -:   88:
+        -:   89:template<class element>
+        -:   90:void DynamicArray<element>::clear() {
+        -:   91:    this->size = 0;
+        -:   92:    this->capacity = default_capacity;
+        -:   93:    delete[] this->array;
+        -:   94:    this->array = new element[default_capacity];
+        -:   95:}
+        -:   96:
+        -:   97:template<class element>
+function _ZN12DynamicArrayI8TutorialE6removeEj called 3 returned 100% blocks executed 60%
+        3:   98:void DynamicArray<element>::remove(unsigned int pos) {
+        -:   99:    //delete this->array[pos];
+       3*:  100:    for (unsigned int i = pos; i < this->size - 1; i++) {
+        3:  100-block  0
+        3:  100-block  1
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    #####:  101:        this->array[i] = this->array[i + 1];
+    %%%%%:  101-block  0
+call    0 never executed
+        -:  102:    }
+        3:  103:    this->size--;
+        3:  104:}
+        -:  105:
+        -:  106:template<class element>
+        -:  107:void *DynamicArray<element>::get_arr() {
+        -:  108:    return this->array;
+        -:  109:}
