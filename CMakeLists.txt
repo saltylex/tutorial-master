@@ -20,7 +20,7 @@ find_package(Qt6 COMPONENTS
 
 add_executable(a5_5_913_Goia_Alexia
     "source files/main.cpp"
-    "header files/DynamicArray.h"
+    "header files/dynamicArray.h"
     "source files/service.cpp"
     "header files/service.h"
     "source files/repo.cpp"
